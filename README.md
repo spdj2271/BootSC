@@ -10,7 +10,7 @@ Clone the repository:
     
 Install dependencies:
 
-    cd BootSC
+    cd BootSC-5B1B
     pip install -r requirements.txt
 
 Training: Run the training script by executing:
