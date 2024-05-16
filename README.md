@@ -24,7 +24,7 @@ dataset_name = ['cifar10', 'cifar100', 'imagenet10', 'imagenet_dogs', 'tiny_imag
 
 Training: Run the training script by executing:
 
-    python train.py
+    python BootSC.py
 
 ## Acknowledgements:
 We acknowledge the contributions of the PyTorch Lightning, Lightly, and torch communities for providing foundational libraries and resources used in this implementation.
