@@ -2,7 +2,7 @@
 
 BootSC is an online deep spectral clustering framework. This repository contains the PyTorch implementation of BootSC along with training scripts and utility functions.
 
-## Usage:
+## Usage
 
 Clone the repository:
 
@@ -21,10 +21,9 @@ By default, BootSC utilizes the CIFAR-10 dataset and you can alse choose specifi
 dataset_name = ['cifar10', 'cifar100', 'imagenet10', 'imagenet_dogs', 'tiny_imagenet'][2] # for ImageNet-10
 ````
 
-
 Training: Run the training script by executing:
 
     python BootSC.py
 
-## Acknowledgements:
+## Acknowledgements
 We acknowledge the contributions of the PyTorch Lightning, Lightly, and torch communities for providing foundational libraries and resources used in this implementation.
