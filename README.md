@@ -6,11 +6,10 @@ BootSC is an online deep spectral clustering framework. This repository contains
 
 Clone the repository:
 
-    git clone https://anonymous.4open.science/r/BootSC-5B1B
+    git clone https://github.com/spdj2271/BootSC
     
 Install dependencies:
 
-    cd BootSC-5B1B
     pip install -r requirements.txt
 
 Data Preparation: 
@@ -18,10 +17,10 @@ Both the CIFAR-10 and CIFAR-100 datasets will be automatically downloaded and pr
 As for the ImageNet-10, ImageNet Dogs, and Tiny ImageNet datasets, please refer to [this link](https://github.com/XLearning-SCU/2021-AAAI-CC) for downloading and configuring.
 By default, BootSC utilizes the CIFAR-10 dataset and you can alse choose specific datasets by modifying the `dataset_name` variable in the script (Line 147 in BootSC.py)：
 ````
-dataset_name = ['cifar10', 'cifar100', 'imagenet10', 'imagenet_dogs', 'tiny_imagenet'][2] # for ImageNet-10
+dataset_name = ['cifar10', 'cifar100', 'imagenet10', 'imagenet_dogs', 'tiny_imagenet'][0] # for Cifar-10
 ````
 
-Training: Run the training script by executing:
+Training:
 
     python BootSC.py
 
