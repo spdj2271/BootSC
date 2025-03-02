@@ -132,7 +132,9 @@ class Model(LightningModule):
         # tensorboard log
         metrics = {"acc_pred": acc_pred, "nmi_pred": nmi_pred, "ari_pred": ari_pred}
         metrics = {"Metric/" + key: value for key, value in metrics.items()}
+        print(metrics)
         self.log_dict(metrics, prog_bar=False)
+
 
 
 # Setting a global seed for reproducibility, Configuring GPU
