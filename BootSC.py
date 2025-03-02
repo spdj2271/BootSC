@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 import numpy as np
 # Importing PyTorch Lightning for high-level PyTorch framework functionality
 import pytorch_lightning as pl
