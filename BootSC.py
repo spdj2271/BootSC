@@ -23,12 +23,11 @@ from utils import hungarian_evaluate, get_ds_loaders, CustomCosineAnnealingWarmR
 
 
 class Model(LightningModule):
-    def __init__(self, dataloader_test, n_classes, max_epochs):
+    def __init__(self, n_classes, max_epochs):
         super().__init__()
         # Storing parameters
         self.n_classes = n_classes
         self.max_epochs = max_epochs
-        self.dataloader_test = dataloader_test
 
         # Initializing the ResNet backbone, the projection head, online clustering layer
         resnet = ResNetGenerator("resnet-34")
@@ -195,10 +194,10 @@ test_transforms = torchvision.transforms.Compose(
 lr = 4e-2 * (batch_size / 256)
 
 # Loading datasets
-dataloader_train_ssl, dataloader_test, classes = get_ds_loaders(dataset_name, transform, test_transforms, batch_size,
+dataloader_train, dataloader_test, classes = get_ds_loaders(dataset_name, transform, test_transforms, batch_size,
                                                                 num_workers)
 # Initializing the BootSC model
-BootSC = Model(dataloader_test, classes, max_epochs)
+BootSC = Model(classes, max_epochs)
 hyperparams = {var_name: var_value for var_name, var_value in locals().items()
                if not var_name.startswith("__") and type(var_value) in [bool, int, float, str, list]}
 print(f'\033[32m{hyperparams}\033[0m')
@@ -211,4 +210,4 @@ checkpoint_callback = pl.callbacks.ModelCheckpoint(dirpath=os.path.join(logger.l
 # Configuring and starting the training process
 trainer = pl.Trainer(max_epochs=max_epochs, accelerator=accelerator, default_root_dir=logs_root_dir, logger=logger,
                      callbacks=[checkpoint_callback])
-trainer.fit(BootSC, train_dataloaders=dataloader_train_ssl, val_dataloaders=dataloader_test)
+trainer.fit(BootSC, train_dataloaders=dataloader_train, val_dataloaders=dataloader_test)
