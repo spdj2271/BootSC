@@ -163,7 +163,6 @@ lr_factor = 0.5
 mean = IMAGENET_NORMALIZE["mean"]
 std = IMAGENET_NORMALIZE["std"]
 if dataset_name == 'cifar10':
-    batch_size = 256
     mean = [0.4914, 0.4822, 0.4465]
     std = [0.24670, 0.2434, 0.2616]
     transform = BYOLTransform(
