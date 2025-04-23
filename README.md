@@ -1,4 +1,4 @@
-# BootSC: Bootstrap Spectral Clustering by Deep Neural Networks
+# Bootstrap Deep Spectral Clustering with Optimal Transport (BootSC)
 
 BootSC is an online deep spectral clustering framework. This repository contains the PyTorch implementation of BootSC along with training scripts and utility functions.
 
