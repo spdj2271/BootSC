@@ -26,3 +26,15 @@ Training:
 
 ## Acknowledgements
 We acknowledge the contributions of the PyTorch Lightning, Lightly, and torch communities for providing foundational libraries and resources used in this implementation.
+
+## Citations
+If you find our work helpful, your citations are highly appreciated:
+```
+@article{guo2025bootstrap,
+  title={Bootstrap Deep Spectral Clustering with Optimal Transport},
+  author={Guo, Wengang and Ye, Wei and Chen, Chunchun and Sun, Xin and B{\"o}hm, Christian and Plant, Claudia and Rahardja, Susanto},
+  journal={IEEE Transactions on Multimedia},
+  year={2025},
+  publisher={IEEE}
+}
+```
