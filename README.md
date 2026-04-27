@@ -32,11 +32,14 @@ We acknowledge the contributions of the PyTorch Lightning, Lightly, and torch co
 ## Citations
 If you find our work helpful, your citations are highly appreciated:
 ```
-@article{guo2025bootstrap,
-	title={Bootstrap Deep Spectral Clustering with Optimal Transport},
-	author={Guo, Wengang and Ye, Wei and Chen, Chunchun and Sun, Xin and B{\"o}hm, Christian and Plant, Claudia and Rahardja, Susanto},
-	journal={IEEE Transactions on Multimedia},
-	pages={531-544},
-	year={2025}
+@article{guo2026bootstrap,
+  author={Guo, Wengang and Ye, Wei and Chen, Chunchun and Sun, Xin and Böhm, Christian and Plant, Claudia and Rahardja, Susanto},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Bootstrap Deep Spectral Clustering With Optimal Transport}, 
+  year={2026},
+  volume={28},
+  number={},
+  pages={531-544},
+  doi={10.1109/TMM.2025.3623492}
 }
 ```
