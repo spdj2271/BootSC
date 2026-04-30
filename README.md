@@ -6,6 +6,7 @@ BootSC is an online deep spectral clustering network.
 
 ## Which script should I use?
 **Update:** April 30, 2026
+
 Please choose the training script according to your input type:
 
 - For **raw image input**, please use `BootSC.py`.
