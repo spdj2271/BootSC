@@ -242,7 +242,7 @@ dataset_name = [
     "UCF-101",
 ][1]
 
-max_epochs = 1000
+max_epochs = 100
 input_size = 32
 batch_size = 256
 num_workers = 8
