@@ -4,6 +4,11 @@ BootSC is an online deep spectral clustering network.
 
 [Paper](https://arxiv.org/pdf/2508.04200)
 
+For raw image input, please use `BootSC.py`.
+
+For pre-extracted feature vectors or non-image input, please use `BootSC_for_feature_input.py`.
+
+
 ## Usage
 
 Clone the repository:
