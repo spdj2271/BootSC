@@ -4,8 +4,6 @@ import os
 import torch
 from torch.utils.data import TensorDataset, DataLoader
 
-from utils_AutoSC import load_embedding
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 import numpy as np
