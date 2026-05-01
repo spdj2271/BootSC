@@ -5,12 +5,12 @@ BootSC is an online deep spectral clustering network.
 [Paper](https://arxiv.org/pdf/2508.04200)
 
 ## Which script should I use?
-**Update:** April 30, 2026
+
 
 Please choose the training script according to your input type:
 
 - For **raw image input**, please use `BootSC.py`.
-- For **pre-extracted feature vectors or non-image input**, please use `BootSC_for_feature_input.py`.
+- [**Update:** April 30, 2026] For **pre-extracted feature vectors or non-image input**, please use `BootSC_for_feature_input.py`.
 
 In short, if your input is an image tensor, use `BootSC.py`; if your input is already represented as a feature matrix `X` with shape `[N, D]`, use `BootSC_for_feature_input.py`.
 
