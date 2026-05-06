@@ -310,5 +310,5 @@ checkpoint_callback = pl.callbacks.ModelCheckpoint(dirpath=os.path.join(logger.l
 
 # Configuring and starting the training process
 trainer = pl.Trainer(max_epochs=max_epochs, accelerator=accelerator, default_root_dir=logs_root_dir, logger=logger,
-                     check_val_every_n_epoch=50, callbacks=[checkpoint_callback])
+                     check_val_every_n_epoch=1, callbacks=[checkpoint_callback])
 trainer.fit(BootSC, train_dataloaders=dataloader_train, val_dataloaders=dataloader_test)
