@@ -255,7 +255,7 @@ lr = 4e-2 * (batch_size / 256)
 
 # Loading datasets
 # X, y, classes = load_embedding(dataset_name, is_torch=True)
-num_samples = 60000
+num_samples = 10000
 classes = 10
 input_dim = 768
 dataset_name = "GaussianBlobs"
