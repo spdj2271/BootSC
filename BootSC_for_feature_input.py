@@ -228,17 +228,17 @@ logs_root_dir = os.path.join(os.getcwd(), "benchmark_logs")
 accelerator = "gpu" if torch.cuda.is_available() else "cpu"
 
 # Configuring dataset and training hyperparameters
-dataset_name = [
-    "STL-10",
-    "CIFAR-10",
-    "CIFAR-20",
-    "ImageNet-10",
-    "ImageNet-Dogs",
-    "TinyImageNet",
-    "DTD",
-    "ImageNet",
-    "UCF-101",
-][1]
+# dataset_name = [
+#     "STL-10",
+#     "CIFAR-10",
+#     "CIFAR-20",
+#     "ImageNet-10",
+#     "ImageNet-Dogs",
+#     "TinyImageNet",
+#     "DTD",
+#     "ImageNet",
+#     "UCF-101",
+# ][1]
 
 max_epochs = 100
 input_size = 32
@@ -254,8 +254,21 @@ lr_factor = 0.5
 lr = 4e-2 * (batch_size / 256)
 
 # Loading datasets
-X, y, classes = load_embedding(dataset_name, is_torch=True)
-X = X.float()
+# X, y, classes = load_embedding(dataset_name, is_torch=True)
+num_samples = 60000
+classes = 10
+input_dim = 768
+dataset_name = "GaussianBlobs"
+from sklearn.datasets import make_blobs
+X_np, y_np = make_blobs(
+    n_samples=num_samples,
+    centers=classes,
+    n_features=input_dim,
+    cluster_std=1
+)
+X = torch.from_numpy(X_np).float()
+y = torch.from_numpy(y_np).long()
+
 feature_transform = FeatureAugment(
     noise_std=0.01,
     mask_prob=0.1
