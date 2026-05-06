@@ -264,7 +264,7 @@ X_np, y_np = make_blobs(
     n_samples=num_samples,
     centers=classes,
     n_features=input_dim,
-    cluster_std=1
+    cluster_std=2.5
 )
 X = torch.from_numpy(X_np).float()
 y = torch.from_numpy(y_np).long()
